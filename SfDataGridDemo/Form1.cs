@@ -41,7 +41,7 @@ namespace SfDataGridDemo
             if (e.Column.MappingName == "Password")
             {
                 //Get the current row
-                var column = e.RowData as System.Data.DataRow;
+                var column = e.RowData as System.Data.DataRowView;
                 //Set the Password column value as SHA256 hash
                 column["Password"] = GetSHA256Hash((string)e.NewValue);
             }
